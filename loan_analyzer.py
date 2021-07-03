@@ -17,6 +17,7 @@ loan_costs = [500, 600, 200, 1000, 450]
 # How many loans are in the list?
 # @TODO: Use the `len` function to calculate the total number of loans in the list.
 # Print the number of loans from the list
+
 number_of_loans = len(loan_costs)
 
 print()
@@ -229,3 +230,13 @@ output_path = Path("inexpensive_loans.csv")
 # @TODO: Use the csv library and `csv.writer` to write the header row
 # and each row of `loan.values()` from the `inexpensive_loans` list.
 # YOUR CODE HERE!
+
+with open(output_path, 'w+', newline ='') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    csvwriter.writerow(header)
+    for items in inexpensive_loans:
+        csvwriter.writerow(items.values())
+
+print()
+print("Part 5")
+print(items)
