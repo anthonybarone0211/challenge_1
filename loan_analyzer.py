@@ -237,6 +237,8 @@ with open(output_path, 'w+', newline ='') as csvfile:
     for items in inexpensive_loans:
         csvwriter.writerow(items.values())
 
+
+#Printed items result to see the list again
 print()
 print("Part 5")
 print(items)
